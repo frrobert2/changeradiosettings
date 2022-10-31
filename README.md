@@ -3,7 +3,9 @@
 This is a quickie script to show how you could use rigctl from hamlib to change settings on your radio.
 
 This script was inspired by https://www.youtube.com/watch?v=34c-d9LghdY
+
 KM6LYW Radio
+
 The new script was assembled by Robert W9RWB                                                                                                                                                           
 The purpose is to change radio setting via the commandline on radios connected to your computer with hamlib
 
