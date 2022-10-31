@@ -21,3 +21,5 @@ The exaple script and files are assuming you are using flrig to run your radio a
 The script will change the frequency to 145.825 MHZ for the specified time in minutes then change the frequency back to 144.390 MHz.
 
 You can add commands to both command1.txt and command2.txt to change additional settings if you want.  See the rigctl man page for more information
+
+The script can be used with the bash command at to set times you want to run the script.
