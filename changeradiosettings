@@ -1,0 +1,20 @@
+#!/bin/bash                                                                                                                                                                                                    
+# Thei script was inspired by https://www.youtube.com/watch?v=34c-d9LghdY
+# KM6LYW Radio
+# The new script was assembled by Robert W9RWB                                                                                                                                                                 
+# The purpose is to change radio setting via the commandline on radios connected to your computer with hamlib
+# hamlib needs to be installed on your computer. The example settings for rigctl use rigctl -m 4 which denotes I am using fldigi for rig control.  If you are using fldigi for rig control fldigi will need to be running for the script to work.
+  9 btime=$1                                                                                                                                                                                                       
+  8 if [ "$btime" == "" ]; then                                                                                                                                                                                    
+  7   echo "Usage:  $1 <Enter time in minutes with no units>"                                                                                                                                                      
+  6   exit 1                                                                                                                                                                                                       
+  5 fi         
+  #  -m 4 denotes I am doing rig control through flrig  if you are only using hamlib would would change the integer to the number that reflects your rig
+  #commands1.txt are the commands you want your radio to change to.
+  4 rigctl -m 4 - <commands1.txt                                                                                                                                                                                   
+  3                                                                                                                                                                                                                
+  2 sleep "$1m"                                                                                                                                                                                                    
+  1 
+  #  -m 4 denotes I am doing rig control through flrig  if you are only using hamlib would would change the integer to the number that reflects your rig
+  # commands2.txt are the commands you want your radio to change back to after the given time
+18  rigctl -m 4 - <commands2.txt
